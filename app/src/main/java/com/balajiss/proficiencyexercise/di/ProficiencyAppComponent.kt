@@ -1,6 +1,7 @@
 package com.balajiss.proficiencyexercise.di
 
 import com.balajiss.proficiencyexercise.ProficiencyApplication
+import com.balajiss.proficiencyexercise.network.RetrofitModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -12,7 +13,10 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AndroidSupportInjectionModule::class,
-        ActivityModule::class
+        AppContextModule::class,
+        ActivityModule::class,
+        RetrofitModule::class,
+        ProficiencyAppModule::class
     ]
 )
 interface ProficiencyAppComponent : AndroidInjector<DaggerApplication> {

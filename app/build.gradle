@@ -38,10 +38,13 @@ def gsonVersion = "2.8.5"
 def junitVersion = "4.13"
 def androidxJunitExtVersion = "1.1.1"
 def androidxEspresso = "3.2.0"
+def mockitoVersion = "1.10.19"
+def androidxTestVersion = "2.1.0"
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     implementation "androidx.appcompat:appcompat:$androidxAppCompactVersion"
     implementation "androidx.core:core-ktx:$androidxKtxVersion"
     implementation "androidx.constraintlayout:constraintlayout:$androidxConstraintVersion"
@@ -74,4 +77,8 @@ dependencies {
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitExtVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspresso"
+    testImplementation "androidx.arch.core:core-testing:$androidxTestVersion"
+    androidTestImplementation "androidx.arch.core:core-testing:$androidxTestVersion"
+
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
 }
