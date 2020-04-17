@@ -1,6 +1,6 @@
-package com.balajiss.proficiencyexercise.di
+package com.balajiss.proficiencyexercise.ui.main
 
-import com.balajiss.proficiencyexercise.ui.main.ListFragment
+import com.balajiss.proficiencyexercise.di.FragmentScope
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

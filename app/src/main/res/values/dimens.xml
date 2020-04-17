@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="titleText">32sp</dimen>
+    <dimen name="descriptionText">16sp</dimen>
+    <dimen name="noData">30sp</dimen>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="padding_sm">12dp</dimen>
+    <dimen name="padding_xs">8dp</dimen>
+    <dimen name="padding_xxs">4dp</dimen>
+    <dimen name="padding_md">20dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="margin_sm">12dp</dimen>
+    <dimen name="margin_md">20dp</dimen>
+    <dimen name="maxImageHeight">108dp</dimen>
+    <dimen name="maxImageWidth">108dp</dimen>
+    <dimen name="minImageHeight">72dp</dimen>
+    <dimen name="minImageWidth">96dp</dimen>
+</resources>

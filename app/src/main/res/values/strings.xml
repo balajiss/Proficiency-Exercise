@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Proficiency Exercise</string>
+    <string name="image_content">Image</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="timeout">Connection Timed out</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="retry">Retry</string>
+    <string name="no_data">No data found\nPull down to refresh</string>
+    <string name="refresh">Refresh</string>
 </resources>

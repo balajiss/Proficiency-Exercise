@@ -1,5 +1,8 @@
 package com.balajiss.proficiencyexercise.network
 
+/*
+* A generic class that contains status and data
+* */
 class NetworkResource<T> constructor(val status: Status, val data: T?, val throwable: Throwable?) {
 
     companion object {

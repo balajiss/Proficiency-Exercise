@@ -15,6 +15,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -29,15 +30,19 @@ def androidxKtxVersion = "1.2.0"
 def androidxConstraintVersion = "1.1.3"
 def androidxLifecycleVersion = "2.2.0"
 def retrofitVersion = "2.2.0"
-def okHttpLoggingVersion = "4.1.1"
 def daggerVersion = "2.25.2"
 def rxJavaVersion = "2.2.14"
 def rxAndroidVersion = "2.1.1"
 def gsonVersion = "2.8.5"
+def swipeLayoutVersion = "1.0.0"
+def recyclerViewVersion = "1.1.0"
+def picassoVersion = "2.71828"
+def materialVersion = "1.1.0"
 
 def junitVersion = "4.13"
 def androidxJunitExtVersion = "1.1.1"
 def androidxEspresso = "3.2.0"
+def testRuleVersion = "1.2.0"
 def mockitoVersion = "1.10.19"
 def androidxTestVersion = "2.1.0"
 
@@ -55,7 +60,6 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpLoggingVersion"
 
     // Dagger
     implementation "com.google.dagger:dagger:$daggerVersion"
@@ -74,9 +78,23 @@ dependencies {
     // Gson
     implementation "com.google.code.gson:gson:$gsonVersion"
 
+    // SwipeRefreshLayout
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipeLayoutVersion"
+
+    // Recycler View
+    implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+
+    // Picasso
+    implementation "com.squareup.picasso:picasso:$picassoVersion"
+
+    // Material design
+    implementation "com.google.android.material:material:$materialVersion"
+
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitExtVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspresso"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$androidxEspresso"
+    androidTestImplementation "androidx.test:rules:$testRuleVersion"
     testImplementation "androidx.arch.core:core-testing:$androidxTestVersion"
     androidTestImplementation "androidx.arch.core:core-testing:$androidxTestVersion"
 

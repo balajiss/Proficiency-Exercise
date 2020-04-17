@@ -7,8 +7,14 @@ import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
 import javax.inject.Inject
 
-class ListRepository @Inject constructor(private val networkService: NetworkService, private val schedulerProvider: SchedulerProvider) {
+class ListRepository @Inject constructor(
+    private val networkService: NetworkService,
+    private val schedulerProvider: SchedulerProvider
+) {
 
+    /*
+    * Method which fetch data from server and returns a livedata object
+    * */
     fun getData(): MutableLiveData<NetworkResource<DataResponse>> {
         val liveData = MutableLiveData<NetworkResource<DataResponse>>()
         networkService.getData()

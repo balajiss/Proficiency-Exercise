@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="descriptionText">20sp</dimen>
+    <dimen name="maxImageHeight">124dp</dimen>
+    <dimen name="maxImageWidth">140dp</dimen>
+    <dimen name="minImageHeight">128dp</dimen>
+    <dimen name="minImageWidth">128dp</dimen>
+</resources>

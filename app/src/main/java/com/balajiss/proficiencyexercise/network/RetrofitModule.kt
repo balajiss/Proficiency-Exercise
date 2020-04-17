@@ -12,9 +12,9 @@ import java.util.concurrent.TimeUnit
 class RetrofitModule {
 
     @Provides
-    fun provideHttpClient(): OkHttpClient {
+    fun provideHttpClient(networkInterceptor: NetworkInterceptor): OkHttpClient {
         return OkHttpClient.Builder()
-            .addInterceptor(NetworkInterceptor())
+            .addInterceptor(networkInterceptor)
             .readTimeout(NetworkConstants.READ_TIMEOUT, TimeUnit.SECONDS)
             .writeTimeout(NetworkConstants.WRITE_TIMEOUT, TimeUnit.SECONDS)
             .connectTimeout(NetworkConstants.CONNECTION_TIMEOUT, TimeUnit.SECONDS)

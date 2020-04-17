@@ -4,6 +4,7 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import com.balajiss.proficiencyexercise.data.main.DataResponse
+import com.balajiss.proficiencyexercise.data.main.DataResponseItem
 import com.balajiss.proficiencyexercise.data.main.ListRepository
 import com.balajiss.proficiencyexercise.data.main.NetworkService
 import com.balajiss.proficiencyexercise.network.SchedulerProvider
@@ -50,10 +51,20 @@ class MainViewModelTest {
         Mockito.`when`(networkService.getData())
             .thenReturn(Observable.just(DataResponse("Test", ArrayList())))
 
+        mainViewModel.fetchData()
+
         assertEquals(
             DataResponse("Test", ArrayList()),
-            mainViewModel.getData().getOrAwaitValue().data
+            mainViewModel.liveData.getOrAwaitValue().data
         )
+    }
+
+    @Test
+    fun testFilterData() {
+        val data = ArrayList<DataResponseItem>()
+        data.add(DataResponseItem(null, null, null))
+        data.add(DataResponseItem("Test", "Test", "Test"))
+        assertEquals(1, mainViewModel.filterData(data).size)
     }
 
     @After
